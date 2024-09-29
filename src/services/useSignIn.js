@@ -8,8 +8,8 @@ export function useSignIn() {
   const queryClient = useQueryClient();
   const { mutate: signIn, isPending } = useMutation({
     mutationFn: signInApi,
-    onSuccess: (user) => {
-      queryClient.setQueryData(["user"], user);
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["user"] });
       navigate("/", { replace: true });
     },
     onError: (err) => {

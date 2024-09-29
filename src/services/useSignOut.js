@@ -11,7 +11,7 @@ export function useSignOut() {
     mutationFn: signOutApi,
     onSuccess: () => {
       queryClient.removeQueries(["user"]);
-      navigate("/");
+      navigate("/", { replace: true });
       toast.dismiss();
       toast.success("Signed out");
     },
