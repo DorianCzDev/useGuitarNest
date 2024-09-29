@@ -1,5 +1,4 @@
-"use client";
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 
 function TextExpander({
   children,
