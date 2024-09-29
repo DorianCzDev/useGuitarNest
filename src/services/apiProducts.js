@@ -43,3 +43,23 @@ export async function getCartProductsApi(idArray) {
     throw new Error(error.response.data.message);
   }
 }
+
+export async function getFeaturedProductsApi() {
+  let url = `${baseUrl}/products/featured`;
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response.data.message);
+  }
+}
+
+export async function getDiscountedProductsApi() {
+  let url = `${baseUrl}/products/discounted`;
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response.data.message);
+  }
+}

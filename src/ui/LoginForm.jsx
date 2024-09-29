@@ -13,8 +13,8 @@ function LoginForm() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      email: "test3@gmail.com",
-      password: "secret",
+      email: import.meta.env.VITE_USERNAME || "test3@gmail.com",
+      password: import.meta.env.VITE_PASSWORD,
     },
   });
 
