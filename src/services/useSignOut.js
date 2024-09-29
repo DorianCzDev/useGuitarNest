@@ -10,13 +10,13 @@ export function useSignOut() {
   const { mutate: signOut, isPending } = useMutation({
     mutationFn: signOutApi,
     onSuccess: () => {
-      queryClient.removeQueries(["user"]);
+      queryClient.resetQueries({ queryKey: ["user"], exact: true });
       navigate("/", { replace: true });
       toast.dismiss();
       toast.success("Signed out");
     },
     onError: (err) => {
-      queryClient.removeQueries(["user"]);
+      queryClient.resetQueries({ queryKey: ["user"], exact: true });
       toast.dismiss();
       toast.error(err.message);
     },
