@@ -10,6 +10,7 @@ export function useUser() {
     queryKey: ["user"],
     queryFn: getCurrentUserApi,
     retry: false,
+    refetchOnMount: false,
   });
 
   return { isLoading, user, isLoadingError };
