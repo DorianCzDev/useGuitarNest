@@ -24,6 +24,8 @@ import VerifyEmail from "./pages/VerifyEmail";
 import ResetPassword from "./pages/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword";
 import PageNotFound from "./pages/PageNotFound";
+import Orders from "./pages/Orders";
+import SingleOrder from "./pages/SingleOrder";
 
 axios.defaults.withCredentials = true;
 
@@ -74,9 +76,9 @@ function App() {
                 path="account/change-password"
                 element={<ChangePassword />}
               />
+              <Route path="account/orders" element={<Orders />} />
+              <Route path="account/orders/:id" element={<SingleOrder />} />
             </Route>
-
-            {/* <Route path="account/order/:id" element={<Order />} /> */}
 
             <Route path="/product/:name" element={<ProductDetails />} />
           </Route>

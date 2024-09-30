@@ -9,7 +9,7 @@ function AccountSidebar() {
       <SidebarNavLink to={"/account/change-password"}>
         change password
       </SidebarNavLink>
-      {/* <SidebarNavLink to={"/account/my-orders"}>my orders</SidebarNavLink> */}
+      <SidebarNavLink to={"/account/orders"}>my orders</SidebarNavLink>
       <SidebarNavLink type="span" onClick={signOut}>
         logout
       </SidebarNavLink>
