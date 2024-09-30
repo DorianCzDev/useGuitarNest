@@ -29,7 +29,7 @@ function CartTable({ cart, products }) {
             <CartTableRow key={product.id}>
               <div className="flex justify-center items-center bg-white mr-5 md:hidden">
                 <NavLink
-                  to={`/products/${product.name.replaceAll(" ", "_")}`}
+                  to={`/product/${product.name}`}
                   className="flex items-center min-h-10"
                 >
                   <img
@@ -39,7 +39,7 @@ function CartTable({ cart, products }) {
                 </NavLink>
               </div>
               <NavLink
-                to={`/products/${product.name.replaceAll(" ", "_")}`}
+                to={`/product/${product.name}`}
                 className="flex items-center min-h-10"
               >
                 <CartTableCol>{product.name}</CartTableCol>

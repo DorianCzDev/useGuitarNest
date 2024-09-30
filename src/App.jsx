@@ -23,6 +23,7 @@ import SignUp from "./pages/SignUp";
 import VerifyEmail from "./pages/VerifyEmail";
 import ResetPassword from "./pages/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword";
+import PageNotFound from "./pages/PageNotFound";
 
 axios.defaults.withCredentials = true;
 
@@ -77,18 +78,9 @@ function App() {
 
             {/* <Route path="account/order/:id" element={<Order />} /> */}
 
-            <Route path="guitars/product/:name" element={<ProductDetails />} />
-            <Route
-              path="amplifiers/product/:name"
-              element={<ProductDetails />}
-            />
-            <Route path="pickups/product/:name" element={<ProductDetails />} />
-            <Route
-              path="multiEffects/product/:name"
-              element={<ProductDetails />}
-            />
+            <Route path="/product/:name" element={<ProductDetails />} />
           </Route>
-          {/* <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
 

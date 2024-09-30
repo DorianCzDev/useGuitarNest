@@ -13,15 +13,9 @@ function ProductElement({ product }) {
     price,
     reviews_number: reviewsNumber,
     regular_price: regularPrice,
-    category,
   } = product;
   return (
-    <NavLink
-      to={`/${
-        category !== "multi effect" ? `${category}s` : "multieffects"
-      }/product/${name}`}
-      className="mb-8"
-    >
+    <NavLink to={`/product/${name}`} className="mb-8">
       <li
         className={`grid grid-rows-[240px_1fr] border ${
           featured ? "border-secondary-600" : "border-primary-600"

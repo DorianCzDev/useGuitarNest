@@ -108,7 +108,7 @@ function OrderOverview() {
               </div>
               <OrderSummarySpan>
                 <NavLink
-                  href={`/products/${product.name.replaceAll(" ", "_")}`}
+                  to={`/product/${product.name}`}
                   className="flex items-center min-h-10 uppercase"
                 >
                   {product.name}
