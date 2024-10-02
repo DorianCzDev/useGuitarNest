@@ -26,6 +26,8 @@ import ForgotPassword from "./pages/ForgotPassword";
 import PageNotFound from "./pages/PageNotFound";
 import Orders from "./pages/Orders";
 import SingleOrder from "./pages/SingleOrder";
+import { useEffect, useState } from "react";
+import getLocalStorageItem from "./utilities/getLocalStorageItem";
 
 axios.defaults.withCredentials = true;
 

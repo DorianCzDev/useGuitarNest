@@ -1,3 +1,5 @@
+import { useSearchParams } from "react-router-dom";
+
 function FilterHeader({
   children,
   openIcon,
@@ -6,6 +8,7 @@ function FilterHeader({
   isOpen,
   setIsOpen,
 }) {
+  const [searchParams, setSearchParams] = useSearchParams();
   function handleClick() {
     setIsOpen((cur) => {
       if (cur.includes(isOpenName)) {
@@ -17,10 +20,14 @@ function FilterHeader({
     });
   }
 
+  const isActive = searchParams.get(isOpenName);
+
   return (
     <header
       onClick={handleClick}
-      className="flex border-b border-primary-600 cursor-pointer text-neutral-400 font-bold tracking-wider"
+      className={`flex border-b border-primary-600 cursor-pointer ${
+        isActive ? "text-fontPrimary-500" : "text-fontPrimary-700"
+      } font-bold tracking-wider`}
     >
       <h1 className="flex uppercase text-xl pt-4 pb-3 flex-grow justify-start">
         {children}

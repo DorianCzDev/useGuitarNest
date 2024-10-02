@@ -20,7 +20,7 @@ function CartTable({ cart, products }) {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold tracking-widest p-2 mb-10 text-neutral-400 lg:text-center">
+      <h1 className="text-5xl font-bold tracking-widest p-2 mb-10 text-fontPrimary-600  lg:text-center">
         Cart
       </h1>
       <article>
@@ -76,7 +76,7 @@ export default CartTable;
 
 function CartTableRow({ children }) {
   return (
-    <div className="w-[94%] grid grid-cols-[80px_1fr_200px_120px_80px] py-6 px-2 mx-auto mb-3 rounded-2xl bg-accent-500 text-neutral-200 h-[116px] md:grid-cols-[35%_25%_30%_10%]">
+    <div className="w-[94%] grid grid-cols-[80px_1fr_200px_120px_80px] py-6 px-2 mx-auto mb-3 rounded-2xl bg-accent-500 text-fontPrimary-500 h-[116px] md:grid-cols-[35%_25%_30%_10%]">
       {children}
     </div>
   );
@@ -102,7 +102,7 @@ function Button({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="flex items-center cursor-pointer border-none outline-none bg-transparent text-lg text-neutral-500 transition-all hover:text-neutral-400"
+      className="flex items-center cursor-pointer border-none outline-none bg-transparent text-lg text-fontPrimary-500 transition-all hover:text-fontPrimary-700"
     >
       {children}
     </button>

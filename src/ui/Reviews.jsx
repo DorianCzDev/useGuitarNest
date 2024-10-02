@@ -1,15 +1,13 @@
-import { useSearchParams } from "react-router-dom";
-import { useProductReviews } from "../services/useReviews";
-import Spinner from "./Spinner";
-import { TiStar } from "react-icons/ti";
 import { useState } from "react";
-import Rating from "./Rating";
 import toast from "react-hot-toast";
-import TextExpander from "./TextExpander";
-import { useCreateReview } from "../services/useCreateReview";
-import { reportReviewApi } from "../services/apiReviews";
+import { TiStar } from "react-icons/ti";
+import { useSearchParams } from "react-router-dom";
 import avgRatingFormater from "../helpers/avgRatingFormater";
+import { useCreateReview } from "../services/useCreateReview";
+import { useProductReviews } from "../services/useReviews";
+import Rating from "./Rating";
 import Review from "./Review";
+import Spinner from "./Spinner";
 
 function Reviews({ id: productId, avgRating }) {
   const { reviews, isLoading, ratingsCount } = useProductReviews(productId);
@@ -144,7 +142,7 @@ function Reviews({ id: productId, avgRating }) {
             </div>
           </div>
           <div className="w-1/2 text-right text-4xl font-bold tracking-widest flex items-center justify-end md:text-3xl">
-            <span>{avgRatingFormater(avgRating)}/5</span>
+            <span>{avgRatingFormater(avgRating) || 0}/5</span>
             <span className="text-secondary-500 text-5xl md:text-4xl">
               <TiStar />
             </span>
@@ -166,7 +164,7 @@ function Reviews({ id: productId, avgRating }) {
               <button
                 disabled={isPending}
                 onClick={() => setIsWriting(true)}
-                className="mx-auto w-4/5 text-center outline-none cursor-pointer transition-all border-none bg-secondary-500 py-4 px-6 hover:bg-secondary-600 rounded-2xl"
+                className="mx-auto w-4/5 text-center outline-none cursor-pointer transition-all border-none bg-secondary-500 py-4 px-6 hover:bg-secondary-600 rounded-2xl text-slate-50"
               >
                 Write review
               </button>
@@ -174,7 +172,7 @@ function Reviews({ id: productId, avgRating }) {
               <>
                 <button
                   onClick={handleCreateReview}
-                  className="text-center outline-none cursor-pointer transition-all border-none bg-secondary-500 py-4 px-6 hover:bg-secondary-600 rounded-2xl"
+                  className="text-center outline-none cursor-pointer transition-all border-none bg-secondary-500 py-4 px-6 hover:bg-secondary-600 rounded-2xl text-slate-50"
                 >
                   Add review
                 </button>

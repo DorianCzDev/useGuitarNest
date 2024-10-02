@@ -86,10 +86,10 @@ function ProductDetailsHeader({ product }) {
             </Modal>
           </div>
         )}
-        <div className="py-2  text-neutral-400">
+        <div className="py-2  text-fontPrimary-700">
           <NavLink
             to={"/"}
-            className="text-sm px-1 capitalize transition-all hover:text-slate-300"
+            className="text-sm px-1 capitalize transition-all hover:text-fontPrimary-500"
           >
             Home
           </NavLink>
@@ -98,12 +98,12 @@ function ProductDetailsHeader({ product }) {
             to={`/${
               category !== "multi effect" ? `${category}s` : "multieffects"
             } `}
-            className="text-sm px-1 capitalize transition-all hover:text-slate-300"
+            className="text-sm px-1 capitalize transition-all hover:text-fontPrimary-500"
           >{`${category}s`}</NavLink>
           <span className="text-sm">{" > "}</span>
           <NavLink
             to={``}
-            className="text-sm px-1 capitalize transition-all hover:text-slate-300"
+            className="text-sm px-1 capitalize transition-all hover:text-fontPrimary-500"
           >
             {name}
           </NavLink>
@@ -173,7 +173,7 @@ function ProductDetailsHeader({ product }) {
               <button
                 onClick={() => dispatch(addItem(id))}
                 disabled={inventory === 0}
-                className="flex w-full items-center justify-center outline-none cursor-pointer transition-all border-none bg-secondary-500 py-4 px-6 rounded-2xl hover:bg-secondary-600 disabled:opacity-50 disabled:bg-secondary-600 disabled:cursor-not-allowed"
+                className="flex w-full text-slate-50 items-center justify-center outline-none cursor-pointer transition-all border-none bg-secondary-500 py-4 px-6 rounded-2xl hover:bg-secondary-600 disabled:opacity-50 disabled:bg-secondary-600 disabled:cursor-not-allowed"
               >
                 <span className="pr-3 text-2xl">
                   <FaCartPlus />

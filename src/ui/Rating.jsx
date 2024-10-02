@@ -48,12 +48,8 @@ function Rating({
                     className={`-mr-1 text-4xl ${
                       currentrating <= (hover || rating)
                         ? "text-secondary-500"
-                        : "text-neutral-700"
+                        : "text-neutral-600"
                     }`}
-                    // rating={rating}
-                    // currentrating={currentrating}
-                    // hover={hover}
-                    // card={card}
                     onMouseEnter={() => setHover(currentrating)}
                     onMouseLeave={() => setHover(null)}
                   >
@@ -75,12 +71,8 @@ function Rating({
                     className={`-mr-1 text-[26px] ${
                       currentrating <= (hover || rating)
                         ? "text-secondary-500"
-                        : "text-neutral-700"
+                        : "text-neutral-600"
                     }`}
-                    // rating={rating}
-                    // currentrating={currentrating}
-                    // card={card}
-                    // hover={hover}
                   >
                     {" "}
                     <TiStar />
@@ -92,12 +84,12 @@ function Rating({
         );
       })}
       {ratingAverage && card === "true" ? (
-        <span className="text-base mt-1 pl-1 font-bold text-neutral-300">
-          {avgRatingFormater(ratingAverage)}
+        <span className="text-base mt-1 pl-1 font-bold text-fontPrimary-600">
+          {avgRatingFormater(ratingAverage) || 0}
         </span>
       ) : (
-        <span className="text-xl pl-2 font-bold text-neutral-300">
-          {avgRatingFormater(ratingAverage)}
+        <span className="text-base mt-1 pl-1 font-bold text-fontPrimary-600">
+          {avgRatingFormater(ratingAverage) || 0}
         </span>
       )}
       {!isComment && (

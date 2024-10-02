@@ -3,7 +3,7 @@ import priceFormater from "../helpers/priceFormater";
 function OrderSummaryAside({ deliveryDetails, totalCartPrice, totalPrice }) {
   return (
     <>
-      <h1 className="text-[40px] font-bold text-center tracking-widest  mb-3 text-neutral-400">
+      <h1 className="text-[40px] font-bold text-center tracking-widest  mb-3 text-fontPrimary-600">
         Summary
       </h1>
       <div className="flex justify-between items-center mb-4">

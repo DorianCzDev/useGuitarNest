@@ -5,7 +5,7 @@ import Rating from "./Rating";
 
 function ProductElement({ product }) {
   const {
-    featured,
+    is_featured: featured,
     discount,
     name,
     avg_rating: avgRating,
