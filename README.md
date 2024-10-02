@@ -32,3 +32,4 @@ If you want to know more about a specific project, scroll ⬇️.
 - Sign up with verify email, server send email to user
 - Sorting and filtering data
 - Forgot password, server send email to user
+- Dark/light mode
